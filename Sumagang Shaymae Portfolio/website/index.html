@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumagang Shaymae Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Pixel font for retro look -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="light-mode">
+    <!-- Top left sun/moon toggle and name -->
+    <div class="corner-toggle">
+        <!-- Place sun icon SVG here -->
+        <span id="sun-icon" class="icon" title="Switch to dark mode">☀️</span>
+        <!-- Place moon icon SVG here -->
+        <span id="moon-icon" class="icon" title="Switch to light mode" style="display:none;">🌙</span>
+        <div class="corner-name">Shaymae</div>
+    </div>
+    <!-- Wavy blue background shape -->
+    <div class="wavy-bg"></div>
+    <!-- Centered card -->
+    <main>
+        <!-- Home Card -->
+        <div class="main-card section-card" id="home-card">
+            <div class="card-topbar"><span>Home</span></div>
+            <div class="card-content home-content">
+                <h1><span class="pixel-hi">HI,</span> <span class="pixel-name">I'M SHAYMAE :)</span></h1>
+                <p class="subtitle">Student, Web Designer, Developer</p>
+                <div class="nav-icons">
+                    <div class="nav-item" onclick="showSection('about-card')">
+                        <div class="nav-icon"><i class="fa-regular fa-id-card"></i></div>
+                        <div class="nav-label">About</div>
+                    </div>
+                    <div class="nav-item" onclick="showSection('links-card')">
+                        <div class="nav-icon"><i class="fa-solid fa-link"></i></div>
+                        <div class="nav-label">Links</div>
+                    </div>
+                    <div class="nav-item" onclick="showSection('faq-card')">
+                        <div class="nav-icon"><i class="fa-regular fa-circle-question"></i></div>
+                        <div class="nav-label">FAQ</div>
+                    </div>
+                    <div class="nav-item" onclick="showSection('contact-card')">
+                        <div class="nav-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="nav-label">Contact</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Card -->
+        <div class="main-card section-card" id="about-card" style="display:none;">
+            <div class="card-topbar"><span>About</span></div>
+            <div class="card-content">
+                <p style="text-align:left; font-size:1.15rem; line-height:2;">
+                    I’m Currently Taking Bachelor Of Science In Information Technology (BSIT). I Enjoy Learning About Computers, Technology, And How Things Work Behind The Scenes. I Have Skills In Areas Like Programming, Web Development, And Basic Troubleshooting. I Also Know How To Use Tools Like HTML, CSS, And A Bit Of JavaScript. I’m Always Eager To Learn More And Improve My Abilities. My Goal Is To Use What I’ve Learned To Help Solve Problems And Create Useful Solutions In The Tech World.
+                </p>
+                <div class="home-btn" onclick="showSection('home-card')">
+                    <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+                </div>
+            </div>
+        </div>
+        <!-- Links Card -->
+        <div class="main-card section-card" id="links-card" style="display:none;">
+            <div class="card-topbar"><span>Links</span></div>
+            <div class="card-content">
+                <div style="font-size:1.2rem; margin-bottom:2.5rem;">Socials :</div>
+                <div class="socials-row">
+                    <a href="https://www.facebook.com/shaymae.sumagang" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/_shyy.meeee/" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/chums10" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="home-btn" onclick="showSection('home-card')">
+                    <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+                </div>
+            </div>
+        </div>
+        <!-- FAQ Card -->
+        <div class="main-card section-card" id="faq-card" style="display:none;">
+            <div class="card-topbar"><span>FAQs</span></div>
+            <div class="card-content">
+                <div style="text-align:left; font-family:'Press Start 2P',monospace; font-size:1.1rem; margin-bottom:1.5rem;">Frequently Asked Questions :</div>
+                <div class="faq-list">
+                    <div class="faq-item">why did you choose this degree? <span class="faq-arrow">&#9660;</span></div>
+                    <div class="faq-item">are your commissions open? <span class="faq-arrow">&#9660;</span></div>
+                    <div class="faq-item">what software do you use? <span class="faq-arrow">&#9660;</span></div>
+                    <div class="faq-item">how much will it cost? <span class="faq-arrow">&#9660;</span></div>
+                </div>
+                <div class="home-btn" onclick="showSection('home-card')">
+                    <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Card -->
+        <div class="main-card section-card" id="contact-card" style="display:none;">
+            <div class="card-topbar"><span>Contacts</span></div>
+            <div class="card-content">
+                <div style="font-size:1.5rem; margin-bottom:0.5rem;">Yay, Mails!</div>
+                <div style="font-size:1.1rem; margin-bottom:2rem;">if you have any inquiries, you can contact me through email! just enter your email, and your message. ^^</div>
+                <form class="contact-form" onsubmit="return false;">
+                    <div class="form-row">
+                        <label>Email :</label>
+                        <input type="email" required>
+                    </div>
+                    <div class="form-row">
+                        <label>Inquiries :</label>
+                        <textarea required></textarea>
+                    </div>
+                    <button class="send-btn">Send!</button>
+                </form>
+                <div class="home-btn" onclick="showSection('home-card')">
+                    <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
